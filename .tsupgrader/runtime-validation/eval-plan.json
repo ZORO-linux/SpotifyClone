@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-10-27T02:15:40+05:30",
+  "generatedOnPlatform": "win32",
+  "projectType": "server",
+  "setup": [
+    {
+      "command": "npm",
+      "args": ["ci"]
+    }
+  ],
+  "assertions": [
+    {
+      "name": "server-entry-syntax",
+      "kind": "process",
+      "command": "node",
+      "args": ["--check", "server.js"],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 60
+    },
+    {
+      "name": "server-root-responds",
+      "kind": "http-probe",
+      "startCommand": "node",
+      "startArgs": ["server.js"],
+      "url": "http://localhost:3000/",
+      "verificationMethod": "http-status",
+      "expected": "404",
+      "timeoutSeconds": 60
+    },
+    {
+      "name": "tests-pass",
+      "kind": "process",
+      "command": "npm",
+      "args": ["test"],
+      "verificationMethod": "test-results",
+      "expected": "0",
+      "timeoutSeconds": 300
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "planHash": "cf78b737c0cb0d6d53f56c1440a794567d084eb4fd745c699cd92adb32e8d031",
+  "phase": "baseline",
+  "recordedAtUtc": "2026-10-26T20:51:28.5127617Z",
+  "retryCount": 0,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 7895,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "server-entry-syntax",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "",
+        "durationMs": 191
+      },
+      {
+        "name": "server-root-responds",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": false,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 1,
+        "outputSample": "server exited before responding (exit=1)\n--- server output ---\n\u25C7 injected env (2) from .env\r\nnode:internal/modules/cjs/loader:1573\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module \u0027../models/user.model\u0027\r\nRequire stack:\r\n- c:\\Users\\FORDO\\OneDrive\\Desktop\\SpotifyClone_Sheriyans\\src\\controller\\auth.controller.js\r\n- c:\\Users\\FORDO\\OneDrive\\Desktop\\SpotifyClone_Sheriyans\\src\\routes\\auth.routes.js\r\n- c:\\Users\\FORDO\\OneDrive\\Desktop\\SpotifyClone_Sheriyans\\src\\app.js\r\n- c:\\Users\\FORDO\\OneDrive\\Desktop\\SpotifyClone_Sheriyans\\server.js\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1569:15)\r\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1123:27)\r\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1147:10)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1174:12)\r\n    at Module._load (node:internal/modules/cjs/loader:1346:5)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1679:12)\r\n    at require (node:internal/modules/helpers:196:16)\r\n    at Object.\u003Canonymous\u003E (c:\\Users\\FORDO\\OneDrive\\Desktop\\SpotifyClone_Sheriyans\\src\\controller\\auth.controller.js:1:19)\r\n    at Module._compile (node:internal/modules/cjs/loader:1934:14) {\r\n  code: \u0027MODULE_NOT_FOUND\u0027,\r\n  requireStack: [\r\n    \u0027c:\\\\Users\\\\FORDO\\\\OneDrive\\\\Desktop\\\\SpotifyClone_Sheriyans\\\\src\\\\controller\\\\auth.controller.js\u0027,\r\n    \u0027c:\\\\Users\\\\FORDO\\\\OneDrive\\\\Desktop\\\\SpotifyClone_Sheriyans\\\\src\\\\routes\\\\auth.routes.js\u0027,\r\n    \u0027c:\\\\Users\\\\FORDO\\\\OneDrive\\\\Desktop\\\\SpotifyClone_Sheriyans\\\\src\\\\app.js\u0027,\r\n    \u0027c:\\\\Users\\\\FORDO\\\\OneDrive\\\\Desktop\\\\SpotifyClone_Sheriyans\\\\server.js\u0027\r\n  ]\r\n}\r\n\r\nNode.js v26.8.1\r\n",
+        "durationMs": 4391
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": false,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 1,
+        "outputSample": "\r\n\u003E spotifyclone_sheriyans@1.0.0 test\r\n\u003E echo \u0022Error: no test specified\u0022 \u0026\u0026 exit 1\r\n\r\n\u0022Error: no test specified\u0022 \r\n",
+        "durationMs": 1191,
+        "testResults": {
+          "testFramework": "unknown",
+          "runnerDetectedFrom": "none",
+          "testsTotal": 0,
+          "testsPassed": 0,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": true
+        }
+      }
+    ],
+    "executions": [
+      {
+        "source": "setup[0]",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "ci"
+        ],
+        "cwd": "c:\\Users\\FORDO\\OneDrive\\Desktop\\SpotifyClone_Sheriyans",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "server-entry-syntax",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "args": [
+          "--check",
+          "server.js"
+        ],
+        "cwd": "c:\\Users\\FORDO\\OneDrive\\Desktop\\SpotifyClone_Sheriyans",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "server-root-responds",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "args": [
+          "server.js"
+        ],
+        "cwd": "c:\\Users\\FORDO\\OneDrive\\Desktop\\SpotifyClone_Sheriyans",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "test"
+        ],
+        "cwd": "c:\\Users\\FORDO\\OneDrive\\Desktop\\SpotifyClone_Sheriyans",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      }
+    ]
+  }
+}
