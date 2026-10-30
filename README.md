@@ -1,4 +1,4 @@
-# SpotifyClone Sheriyans
+# SpotifyClone
 
 A lightweight Spotify-inspired backend built with Node.js, Express, and MongoDB. The project currently focuses on core authentication flow and a starting structure for music-related features.
 
